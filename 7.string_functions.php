@@ -39,8 +39,15 @@
 	# 判断是否是字符串  is_string
 	
 	# 过滤掉数组中非字符串的值
-	
-	# 压缩字符串  gzcompress
+	$values = array(true,false,"hello",32,"23",23.4,"32.4",'',' ',0,'0');
+	foreach ($values as $value) {
+		# 判断value是否是字符串,如果是那么输出!
+		if (is_string($value)) {
+			echo $value." is a string!<br>";
+		}
+	}
+	echo"<hr>";
+	# 压缩字符串  gzcompress,
 	echo gzcompress($output);
 	# 解压字符串 gzuncompress
  ?>
